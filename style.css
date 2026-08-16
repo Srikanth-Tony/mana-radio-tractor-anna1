@@ -272,3 +272,23 @@
 .yt-wrap{position:absolute!important;right:18px!important;bottom:18px!important;width:200px!important;height:200px!important;z-index:55!important;border-radius:12px!important;overflow:hidden!important;background:#111!important;box-shadow:0 10px 28px rgba(0,0,0,.35)!important}
 .yt-frame{width:200px!important;height:200px!important;display:block!important;border:0!important}
 @media(max-width:900px){.yt-wrap{width:160px!important;height:160px!important}.yt-frame{width:160px!important;height:160px!important}}
+/* AUDIO ONLY - hide YouTube video */
+.yt-wrap{
+  position:absolute!important;
+  width:2px!important;
+  height:2px!important;
+  left:-10000px!important;
+  top:-10000px!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  overflow:hidden!important;
+  border:0!important;
+}
+
+.yt-frame{
+  width:2px!important;
+  height:2px!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  border:0!important;
+}
