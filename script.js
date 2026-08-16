@@ -149,6 +149,59 @@ function playRadio(){
  if(!ytPlayer){initYT();return;}
  try{ytPlayer.loadVideoById({videoId:t.video});}catch(e){playing=false;if(playBtn)playBtn.textContent='▶';}
 }playBtn&&playBtn.addEventListener('click',()=>playing?pauseRadio():playRadio());
+ function changeTrack(direction) {
+  const total = tracks.length;
+  let nextIndex = trackIndex;
+
+  for (let i = 0; i < total; i++) {
+    nextIndex = (nextIndex + direction + total) % total;
+
+    if (tracks[nextIndex] && tracks[nextIndex].video) {
+      trackIndex = nextIndex;
+
+      // Update song information
+      if (typeof renderTrack === "function") {
+        renderTrack();
+      }
+
+      if (typeof refreshPlaylistActive === "function") {
+        refreshPlaylistActive();
+      }
+
+      // Play selected song
+      playing = true;
+      if (playBtn) playBtn.textContent = "Ⅱ";
+
+      if (ytPlayer) {
+        try {
+          ytPlayer.loadVideoById(tracks[trackIndex].video);
+        } catch (error) {
+          console.error("Could not load next song:", error);
+        }
+      } else {
+        initYT();
+      }
+
+      return;
+    }
+  }
+
+  toast("No playable song available");
+}
+
+// NEXT button
+if (nextBtn) {
+  nextBtn.addEventListener("click", function () {
+    changeTrack(1);
+  });
+}
+
+// PREVIOUS button
+if (prevBtn) {
+  prevBtn.addEventListener("click", function () {
+    changeTrack(-1);
+  });
+}
  function findNextPlayable(direction){
   const total = tracks.length;
 
