@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mana Radio — Ammamma Radio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#spaces"><span class="brand-mark">◉</span><span><b>MANA RADIO</b><small>TRAVEL · LISTEN · REMEMBER</small></span></a>
+  <nav><a href="#spaces">Memories</a><a href="#soon">Coming Soon</a></nav>
+  <div class="live"><i></i> LIVE MEMORY</div>
+</header>
+
+<main>
+<section class="landing">
+  <div class="landing-photo"></div><div class="landing-shade"></div>
+  <div class="landing-content">
+    <p class="kicker">TELUGU AMBIENT AUDIO SPACES</p>
+    <h1>Pick a space.<br><em>Let it play.</em></h1>
+    <p class="intro">Handcrafted little worlds for the songs, sounds and memories that made growing up feel different.</p>
+    <a class="enter-link" href="#spaces">EXPLORE MEMORIES <span>↓</span></a>
+  </div>
+</section>
+
+<section id="spaces" class="spaces">
+  <div class="section-intro"><div><span>OPEN NOW</span><h2>Where do you want to be?</h2></div><p>Choose a place, settle in, and let the atmosphere carry the music.</p></div>
+  <div class="cards">
+    <article class="card tractor" id="tractorCard" onclick="openTractorWorld()"><div class="card-image"></div><div class="card-gradient"></div><div class="card-copy"><span>01 · TRACTOR ANNA</span><h3>ట్రాక్టర్ అన్న</h3><p>Paddy fields · golden harvest · rustic Telugu folk</p><b>ENTER <i>↗</i></b></div></article>
+    <article class="card ammamma" id="ammammaCard"><div class="card-image"></div><div class="card-gradient"></div><div class="card-copy"><span>02 · AMMAMMA RADIO</span><h3>అమ్మమ్మ రేడియో</h3><p>Kitchen warmth · brass vessels · old melodies</p><b>ENTER <i>↗</i></b></div></article>
+    <article class="card auto"><div class="card-image"></div><div class="card-gradient"></div><div class="card-copy"><span>03 · AUTO JANIE</span><h3>ఆటో జానీ</h3><p>City lights · booming speakers · mass songs</p><b>COMING SOON <i>→</i></b></div></article>
+    <article class="card saloon"><div class="card-image"></div><div class="card-gradient"></div><div class="card-copy"><span>04 · ROYAL SALOON</span><h3>రాయల్ సెలూన్</h3><p>Warm afternoon · TV glow · old classics</p><b>COMING SOON <i>→</i></b></div></article>
+    <article class="card tape"><div class="card-image"></div><div class="card-gradient"></div><div class="card-copy"><span>05 · THATHAYYA TAPE</span><h3>తాతయ్య టేప్ రికార్డర్</h3><p>Veranda chair · tea · cassette memories</p><b>COMING SOON <i>→</i></b></div></article>
+    <article class="card terrace"><div class="card-image"></div><div class="card-gradient"></div><div class="card-copy"><span>06 · TERRACE MOONLIGHT</span><h3>మేడ మీద వెన్నెల్లో</h3><p>Starry sky · cool breeze · soothing melodies</p><b>COMING SOON <i>→</i></b></div></article>
+  </div>
+</section>
+
+<section id="soon" class="soon"><span>COMING SOON</span><h2>More places are waiting.</h2>
+<div class="soon-row"><div><small>07</small><b>Kaka Tea Stall</b><p>Early morning chai & melodies</p></div><div><small>08</small><b>Palle Velugu Bus</b><p>Window-seat landscape memories</p></div><div><small>09</small><b>90s School Days</b><p>Bell, friends & lunch-box memories</p></div></div>
+</section>
+<footer><b>MANA RADIO</b><span>Ambient player · music sources connect later</span><span>App · Coming soon</span></footer>
+</main>
+
+<section id="ammammaWorld" class="world hidden">
+  <div class="world-photo"></div><div class="world-shade"></div><div class="sunbeam"></div><canvas id="steamCanvas" aria-hidden="true"></canvas>
+  <div class="film"></div>
+  <button class="back" id="back">← ALL MEMORIES</button>
+  <div class="world-top"><span>02</span><span>AMMAMMA RADIO · 1993</span></div>
+
+  <div class="radio-shelf" aria-hidden="true"><span class="shelf-board"></span><span class="shelf-bracket left"></span><span class="shelf-bracket right"></span></div><div class="kitchen-radio" id="kitchenRadio" title="Tune the radio">
+    <div class="radio-brand">MANA RADIO</div><div class="radio-dial"></div><div class="radio-speaker"></div><div class="radio-light"></div>
+  </div>
+  
+  <div class="window-light"></div><div class="ceiling-fan"></div>
+
+  <div class="world-copy"><small>AMMAMMA RADIO · 02 / 06</small><h2>Afternoon in the kitchen.</h2><p>Steam on the window. A steel tumbler on the table. Somewhere behind the radio, an old melody is playing.</p><div class="scene-meta"><span>1993</span><i></i><span>HOME</span><i></i><span>STEREO</span></div></div>
+  <div class="ambient">FAN <i></i> KITCHEN <i></i> RADIO <i></i> AFTERNOON</div>
+  <div class="sound-chip" id="soundChip">SOUND ON</div>
+  <div class="scene-loading" id="sceneLoading"><div></div><span>ENTERING AMMAMMA RADIO</span></div>
+
+  <div class="radio-player" id="player">
+    <div class="player-label"><span>AMMAMMA FM</span><strong id="freq">91.4</strong></div>
+    <div class="tuning"><span>88</span><input id="dial" type="range" min="88" max="108" step=".1" value="91.4"><span>108</span></div>
+    <div class="signal" id="signal"><i></i><i></i><i></i><i></i><i></i><em id="signalText">TUNED</em></div>
+    <div class="volume-meter" aria-hidden="true"><span id="volumeFill"></span></div><div class="track"><small>AMMAMMA RADIO · 1993</small><b id="song">Inti Madhya Paata</b><span id="artist">Memory station · demo</span></div>
+    <div class="controls"><button id="knobBtn" title="Turn radio knob">KNOB</button><button id="prev">‹</button><button id="play">▶</button><button id="next">›</button><button id="volume" title="Change radio volume">VOL <span id="volValue">60%</span></button></div>
+  </div>
+  
+  <div id="toast"></div>
+</section>
+
+<div id="tractorModal" class="tractor-modal hidden"><button id="closeTractor">× CLOSE</button><iframe id="tractorFrame" src="about:blank" title="Tractor Anna" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<script>
+function openTractorWorld(){
+  var m=document.getElementById('tractorModal'),f=document.getElementById('tractorFrame');
+  if(m&&f){f.src='./tractor/index.html';m.classList.remove('hidden');document.body.style.overflow='hidden';}
+}
+document.getElementById('closeTractor').onclick=function(){
+  document.getElementById('tractorModal').classList.add('hidden');
+  document.getElementById('tractorFrame').src='about:blank';
+  document.body.style.overflow='auto';
+};
+</script>
+<script src="script.js"></script>
+</body>
+</html>
