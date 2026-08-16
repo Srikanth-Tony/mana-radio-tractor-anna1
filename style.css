@@ -1,642 +1,274 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f2ebe1;color:#29231e;font-family:"DM Sans",Arial,sans-serif}.hidden{display:none!important}a{color:inherit;text-decoration:none}.topbar{height:74px;padding:0 5vw;display:flex;align-items:center;gap:42px;background:#171411;color:#f2e8da;position:sticky;top:0;z-index:50}.brand{display:flex;align-items:center;gap:10px}.brand-mark{font-size:22px}.brand b{display:block;font-size:14px;letter-spacing:.18em}.brand small{display:block;font-size:7px;letter-spacing:.08em;opacity:.45;margin-top:4px}.topbar nav{display:flex;gap:25px;margin:auto}.topbar nav a{font-size:10px;opacity:.65}.live{font-size:10px;letter-spacing:.15em}.live i{display:inline-block;width:7px;height:7px;background:#e2673b;border-radius:50%;margin-right:9px;box-shadow:0 0 14px #e2673b}.landing{height:calc(100vh - 74px);min-height:650px;position:relative;overflow:hidden;color:#fff;background:#342d25}.landing-photo{position:absolute;inset:-3%;background:linear-gradient(90deg,#1c1712b8,#1c171244),url("https://images.pexels.com/photos/36230034/pexels-photo-36230034.jpeg?auto=compress&cs=tinysrgb&w=2200") center/cover no-repeat;animation:slowZoom 24s ease-in-out infinite alternate}.landing-shade{position:absolute;inset:0;background:linear-gradient(90deg,#17130fc4 0%,#17130f59 42%,#17130f12 78%),linear-gradient(0deg,#17130f5c,#0000 58%)}.landing-content{position:absolute;left:8vw;top:22%;max-width:550px}.kicker,.section-intro>div>span,.soon>span{font-size:9px;letter-spacing:.24em;color:#d5a16f;font-weight:600}.landing h1{font-family:"Playfair Display",serif;font-size:clamp(58px,7vw,105px);font-weight:400;line-height:.92;letter-spacing:-.05em;margin:20px 0}.landing h1 em{font-style:italic}.intro{font-size:14px;line-height:1.75;color:#f2e8dcaa;max-width:410px}.enter-link{display:inline-flex;gap:45px;margin-top:24px;border-bottom:1px solid #fff8;padding:0 0 9px;font-size:10px;letter-spacing:.16em}.enter-link span{color:#e5a06c}.spaces{padding:105px 7vw;background:#f6f0e7}.section-intro{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}.section-intro h2,.soon h2{font-family:"Playfair Display",serif;font-size:47px;font-weight:400;margin:12px 0}.section-intro>p{max-width:330px;color:#746a60;font-size:12px;line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{height:390px;position:relative;overflow:hidden;border-radius:3px;background:#40372f;color:#fff;cursor:pointer;box-shadow:0 12px 35px #34291c18}.card-image{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1);filter:saturate(.82)}.card-gradient{position:absolute;inset:0;background:linear-gradient(0deg,#100d0aee 0%,#100d0a55 45%,transparent 72%)}.card:hover .card-image{transform:scale(1.055)}.card-copy{position:absolute;left:20px;right:20px;bottom:19px}.card-copy span{font-size:8px;letter-spacing:.18em;color:#e2b184}.card-copy h3{font-family:"Playfair Display",serif;font-size:28px;font-weight:400;margin:7px 0 3px}.card-copy p{font-size:10px;color:#fff9;line-height:1.5;margin:0 0 16px}.card-copy b{font-size:8px;letter-spacing:.16em}.card-copy i{font-style:normal;margin-left:15px;color:#e2a16d}.tractor .card-image{background:linear-gradient(120deg,#596b52,#b28c62)}.ammamma .card-image{background-image:url("https://images.pexels.com/photos/36230034/pexels-photo-36230034.jpeg?auto=compress&cs=tinysrgb&w=1400")}.auto .card-image{background:linear-gradient(135deg,#152331,#bd624c 65%,#2c2925)}.saloon .card-image{background:linear-gradient(120deg,#4c2b21,#b97951)}.tape .card-image{background:linear-gradient(135deg,#98785f,#4b382d)}.terrace .card-image{background:linear-gradient(135deg,#0d1a30,#536b67)}.soon{padding:100px 7vw;background:#2b241e;color:#eee1d0}.soon-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #fff2;margin-top:35px}.soon-row>div{padding:25px;border-right:1px solid #fff2;min-height:150px}.soon-row small{font-size:9px;color:#b87c4c}.soon-row b{display:block;font-family:"Playfair Display",serif;font-size:22px;font-weight:400;margin-top:35px}.soon-row p{font-size:9px;color:#b6a696}footer{padding:25px 7vw;background:#17130f;color:#aa9c8d;display:flex;justify-content:space-between;font-size:9px}
+:root{--paper:#f1eadf;--ink:#29231e;--accent:#b66e3c}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}.hidden{display:none!important}a{color:inherit;text-decoration:none}.topbar{height:74px;padding:0 5vw;display:flex;align-items:center;gap:42px;background:#171411;color:#f2e8da;position:sticky;top:0;z-index:50}.brand{display:flex;align-items:center;gap:10px}.brand-mark{font-size:22px}.brand b{display:block;font-size:14px;letter-spacing:.18em}.brand small{display:block;font-size:7px;letter-spacing:.08em;opacity:.45;margin-top:4px}.topbar nav{display:flex;gap:25px;margin:auto}.topbar nav a{font-size:10px;opacity:.65}.live{font-size:10px;letter-spacing:.15em}.live i{display:inline-block;width:7px;height:7px;background:#e2673b;border-radius:50%;margin-right:9px;box-shadow:0 0 14px #e2673b}.landing{height:calc(100vh - 74px);min-height:650px;position:relative;overflow:hidden;color:#fff;background:#34312c}.landing-photo{position:absolute;inset:-3%;background:url("https://images.pexels.com/photos/34102878/pexels-photo-34102878.jpeg?auto=compress&cs=tinysrgb&w=2400") center 55%/cover no-repeat;animation:slowZoom 24s ease-in-out infinite alternate}.landing-shade{position:absolute;inset:0;background:linear-gradient(90deg,#17140fc2 0%,#17140f62 40%,#17140f14 75%),linear-gradient(0deg,#17140f66,#0000 55%)}.landing-content{position:absolute;left:8vw;top:22%;max-width:550px}.kicker,.section-intro>div>span,.soon>span{font-size:9px;letter-spacing:.24em;color:#d5a16f;font-weight:600}.landing h1{font-family:"Playfair Display",serif;font-size:clamp(58px,7vw,105px);font-weight:400;line-height:.92;letter-spacing:-.05em;margin:20px 0}.landing h1 em{font-style:italic}.intro{font-size:14px;line-height:1.75;color:#f2e8dcaa;max-width:410px}.enter-link{display:inline-flex;gap:45px;margin-top:24px;border-bottom:1px solid #fff8;padding:0 0 9px;font-size:10px;letter-spacing:.16em}.enter-link span{color:#e5a06c}.memory-stamp{position:absolute;right:5vw;bottom:7%;font:10px Arial;letter-spacing:.2em;color:#fff8}.spaces{padding:105px 7vw;background:#f6f0e7}.section-intro{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}.section-intro h2,.soon h2{font-family:"Playfair Display",serif;font-size:47px;font-weight:400;margin:12px 0}.section-intro>p{max-width:330px;color:#746a60;font-size:12px;line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{height:390px;position:relative;overflow:hidden;border-radius:3px;background:#40372f;color:#fff;cursor:pointer;box-shadow:0 12px 35px #34291c18}.card-image{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1);filter:saturate(.82)}.card-gradient{position:absolute;inset:0;background:linear-gradient(0deg,#100d0aee 0%,#100d0a55 45%,transparent 72%)}.card:hover .card-image{transform:scale(1.055)}.card-copy{position:absolute;left:20px;right:20px;bottom:19px}.card-copy span{font-size:8px;letter-spacing:.18em;color:#e2b184}.card-copy h3{font-family:"Playfair Display",serif;font-size:28px;font-weight:400;margin:7px 0 3px}.card-copy p{font-size:10px;color:#fff9;line-height:1.5;margin:0 0 16px}.card-copy b{font-size:8px;letter-spacing:.16em}.card-copy i{font-style:normal;margin-left:15px;color:#e2a16d}.tractor .card-image{background-image:url("https://images.pexels.com/photos/34102878/pexels-photo-34102878.jpeg?auto=compress&cs=tinysrgb&w=1400")}.saloon .card-image{background-image:linear-gradient(120deg,#4c2b21,#b97951)}.auto .card-image{background-image:linear-gradient(135deg,#152331,#bd624c 65%,#2c2925)}.radio .card-image{background-image:linear-gradient(135deg,#9c714f,#4d362b)}.tape .card-image{background-image:linear-gradient(135deg,#98785f,#4b382d)}.terrace .card-image{background-image:linear-gradient(135deg,#0d1a30,#536b67)}.soon{padding:100px 7vw;background:#2b241e;color:#eee1d0}.soon-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #fff2;margin-top:35px}.soon-row>div{padding:25px;border-right:1px solid #fff2;min-height:150px}.soon-row small{font-size:9px;color:#b87c4c}.soon-row b{display:block;font-family:"Playfair Display",serif;font-size:22px;font-weight:400;margin-top:35px}.soon-row p{font-size:9px;color:#b6a696}footer{padding:25px 7vw;background:#17130f;color:#aa9c8d;display:flex;justify-content:space-between;font-size:9px}.world{position:fixed;z-index:100;inset:0;background:#25211d;color:#fff;overflow:hidden}.world-photo{position:absolute;inset:-5%;background:url("https://images.pexels.com/photos/34102878/pexels-photo-34102878.jpeg?auto=compress&cs=tinysrgb&w=2600") center/cover no-repeat;animation:worldDrift 28s ease-in-out infinite alternate}.world-tint{position:absolute;inset:0;background:linear-gradient(90deg,#15120ec0,#15120e22 52%,#15120e45),linear-gradient(0deg,#15120eaa,#0000 50%);transition:background 2s}.film{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 38%,#08070565 100%);mix-blend-mode:multiply}.mist{position:absolute;inset:-10%;pointer-events:none;background:linear-gradient(100deg,transparent 15%,#f5e7ce0d 35%,transparent 55%,#f5e7ce0b 78%,transparent);filter:blur(20px);animation:mist 16s ease-in-out infinite alternate}.back{position:absolute;z-index:20;left:28px;top:23px;background:#fffdf2dd;color:#251f1a;border:0;border-radius:20px;padding:9px 14px;font-size:9px;letter-spacing:.08em}.world-top{position:absolute;z-index:15;top:27px;right:30px;left:8vw;display:flex;justify-content:space-between;font:9px Arial;letter-spacing:.17em;color:#fff9}.world-copy{position:absolute;z-index:15;left:8vw;bottom:24%;max-width:480px;text-shadow:0 4px 22px #000}.world-copy small{font:9px Arial;letter-spacing:.2em;color:#e1a16d}.world-copy h2{font-family:"Playfair Display",serif;font-size:clamp(45px,5vw,76px);font-weight:400;line-height:.98;margin:10px 0}.world-copy p{font-size:11px;color:#fff9;max-width:360px;line-height:1.7}.ambient{position:absolute;right:6vw;bottom:24%;z-index:15;font:8px Arial;letter-spacing:.16em;color:#fff8}.ambient i{display:inline-block;width:4px;height:4px;background:#db8a4c;border-radius:50%;margin:0 8px}.radio-player{position:absolute;z-index:20;left:50%;bottom:24px;transform:translateX(-50%);width:min(540px,90%);padding:13px 15px;background:#17130fe8;border:1px solid #fff2;border-radius:9px;backdrop-filter:blur(13px);box-shadow:0 20px 60px #0008;transition:.4s}.radio-player:hover{background:#17130ff2}.player-label{display:flex;justify-content:space-between;color:#bd9a76;font:8px Arial;letter-spacing:.17em}.player-label strong{font-size:16px;color:#fff;letter-spacing:0}.radio-player input{width:100%;accent-color:#c97b42}.track small{display:block;color:#a89785;font:7px Arial;letter-spacing:.16em}.track b{display:block;font:18px "Playfair Display",serif;font-weight:400;margin-top:2px}.controls{display:flex;gap:7px;margin-top:10px}.controls button{border:1px solid #fff1;background:#30241c;color:#f4e4d0;border-radius:6px;padding:8px 12px;font-size:8px;letter-spacing:.1em}.controls button:first-child{background:#673727;margin-right:auto}.controls button:last-child{margin-left:auto}#toast{position:absolute;z-index:30;left:50%;top:14%;transform:translateX(-50%) translateY(-8px);background:#18130fed;padding:10px 16px;border-radius:20px;font:9px Arial;opacity:0;transition:.3s}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@keyframes slowZoom{from{transform:scale(1.01)}to{transform:scale(1.07)}}@keyframes worldDrift{from{transform:scale(1.04) translate3d(-.4%,0,0)}to{transform:scale(1.1) translate3d(.8%,-.5%,0)}}@keyframes mist{from{transform:translateX(-10%);opacity:.35}to{transform:translateX(10%);opacity:.7}}
+@media(max-width:800px){.topbar nav{display:none}.landing-content{left:7vw;top:18%}.cards{grid-template-columns:1fr 1fr}.section-intro{display:block}.soon-row{grid-template-columns:1fr}.soon-row>div{border-right:0;border-bottom:1px solid #fff2}.ambient{display:none}}@media(max-width:560px){.cards{grid-template-columns:1fr}.card{height:340px}.section-intro h2,.soon h2{font-size:38px}.landing h1{font-size:61px}.radio-player{bottom:9px}.world-copy{bottom:25%;left:7vw}.world-copy h2{font-size:40px}}
 
-/* AMMAMMA WORLD */
-.world{position:fixed;z-index:100;inset:0;background:#4d382b;color:#fff;overflow:hidden}.world-photo{position:absolute;inset:-4%;background:url("https://images.squarespace-cdn.com/content/v1/691b80073c640a64802817cb/d845f923-ff19-4674-acab-a93207832503/Lucid_Origin_a_surreal_and_vibrant_cinematic_photo_of_warm_Ayu_3.jpg") center/cover no-repeat;animation:roomDrift 24s ease-in-out infinite alternate;filter:saturate(.78) sepia(.06) brightness(.78)}.world-shade{position:absolute;inset:0;background:linear-gradient(90deg,#17100bc4 0%,#17100b4d 43%,#17100b12 75%),linear-gradient(0deg,#17100b7d 0%,transparent 60%)}.film{position:absolute;inset:0;z-index:12;pointer-events:none;background:radial-gradient(ellipse at center,transparent 40%,#100b0766 100%);mix-blend-mode:multiply}.sunbeam{position:absolute;z-index:8;right:-10%;top:-20%;width:62%;height:85%;transform:rotate(17deg);background:linear-gradient(90deg,transparent,rgba(255,215,150,.13),transparent);filter:blur(22px);animation:beam 8s ease-in-out infinite alternate;pointer-events:none}.window-light{position:absolute;z-index:7;right:8%;top:8%;width:17%;height:48%;background:linear-gradient(120deg,#e9d3aa1e,#fff0c908);filter:blur(5px);pointer-events:none}.ceiling-fan{position:absolute;z-index:9;right:20%;top:7%;width:85px;height:85px;border-radius:50%;border:1px solid #21181266;animation:fan 2.7s linear infinite;opacity:.4}.ceiling-fan:before,.ceiling-fan:after{content:"";position:absolute;left:39px;top:0;width:7px;height:42px;background:#3c2b22;border-radius:8px;transform-origin:50% 42px}.ceiling-fan:after{transform:rotate(120deg)}.ceiling-fan:before{transform:rotate(60deg)}.kitchen-radio{position:absolute;z-index:14;left:50%;top:52%;width:190px;height:122px;transform:translate(-50%,-50%);background:linear-gradient(145deg,#694a32,#2d211a);border-radius:10px;box-shadow:0 25px 45px #130b0877,inset 0 0 0 5px #8b634377;cursor:pointer}.radio-brand{position:absolute;left:18px;top:13px;font:7px Arial;letter-spacing:.18em;color:#e3c18f}.radio-dial{position:absolute;left:18px;bottom:18px;width:52px;height:52px;border:5px solid #c29b66;border-radius:50%;box-shadow:inset 0 0 0 8px #4a3224}.radio-dial:after{content:"";position:absolute;width:2px;height:17px;background:#ead4aa;left:23px;top:4px;transform:rotate(25deg);transform-origin:bottom}.radio-speaker{position:absolute;right:15px;bottom:18px;width:94px;height:52px;border-radius:4px;background:repeating-linear-gradient(90deg,#251b16 0 3px,#8d6648 3px 5px)}.radio-light{position:absolute;right:17px;top:17px;width:5px;height:5px;border-radius:50%;background:#e9a35f;box-shadow:0 0 15px #e9a35f;animation:radioBlink 2.8s ease-in-out infinite}.brass-pot{position:absolute;z-index:10;border-radius:50% 50% 12px 12px;background:linear-gradient(120deg,#6f4c2a,#d2a35d,#694624);box-shadow:0 12px 20px #120b0888}.pot-a{left:12%;bottom:15%;width:90px;height:105px}.pot-b{left:27%;bottom:11%;width:58px;height:70px}.steam{position:absolute;z-index:13;bottom:28%;width:35px;height:120px;filter:blur(9px);background:linear-gradient(transparent,#f9e7ca24,transparent);opacity:.45}.steam1{left:17%;animation:steam 4s ease-in-out infinite}.steam2{left:30%;height:90px;animation:steam 5s ease-in-out .7s infinite}.world-top{position:absolute;z-index:18;top:27px;right:30px;left:8vw;display:flex;justify-content:space-between;font:9px Arial;letter-spacing:.17em;color:#fff9}.back{position:absolute;z-index:25;left:28px;top:23px;background:#fffdf2dd;color:#251f1a;border:0;border-radius:20px;padding:9px 14px;font-size:9px;letter-spacing:.08em}.world-copy{position:absolute;z-index:18;left:8vw;bottom:23%;max-width:520px;text-shadow:0 4px 22px #000}.world-copy small{font:9px Arial;letter-spacing:.2em;color:#e1a16d}.world-copy h2{font-family:"Playfair Display",serif;font-size:clamp(43px,5vw,74px);font-weight:400;line-height:.98;margin:10px 0}.world-copy p{font-size:11px;color:#fff9;max-width:410px;line-height:1.75}.scene-meta{display:flex;gap:9px;align-items:center;margin-top:18px;font:7px Arial;letter-spacing:.18em;color:#fff8}.scene-meta i{width:3px;height:3px;background:#d89562;border-radius:50%}.ambient{position:absolute;right:6vw;bottom:24%;z-index:18;font:8px Arial;letter-spacing:.16em;color:#fff8}.ambient i{display:inline-block;width:4px;height:4px;background:#db8a4c;border-radius:50%;margin:0 8px}.sound-chip{position:absolute;z-index:20;right:28px;top:58px;border:1px solid #fff2;background:#17130d99;color:#fff8;padding:7px 10px;border-radius:15px;font:7px Arial;letter-spacing:.15em;backdrop-filter:blur(7px)}.radio-player{position:absolute;z-index:22;left:50%;bottom:24px;transform:translateX(-50%);width:min(540px,90%);padding:13px 15px;background:#17130fe8;border:1px solid #fff2;border-radius:9px;backdrop-filter:blur(13px);box-shadow:0 20px 60px #0008}.player-label{display:flex;justify-content:space-between;color:#bd9a76;font:8px Arial;letter-spacing:.17em}.player-label strong{font-size:16px;color:#fff;letter-spacing:0}.tuning{display:flex;align-items:center;gap:6px;color:#8d7764;font:7px Arial}.tuning input{flex:1;accent-color:#c97b42}.signal{height:13px;display:flex;align-items:center;gap:3px;margin-top:2px}.signal i{width:3px;height:4px;background:#8b684e;display:block}.signal i:nth-child(2){height:7px}.signal i:nth-child(3){height:10px}.signal i:nth-child(4){height:7px}.signal em{font:7px Arial;color:#bda58d;font-style:normal;margin-left:5px;letter-spacing:.12em}.track small{display:block;color:#a89785;font:7px Arial;letter-spacing:.16em}.track b{display:block;font:18px "Playfair Display",serif;font-weight:400;margin-top:2px}.track span{display:block;margin-top:4px;color:#88796b;font:7px Arial}.controls{display:flex;gap:7px;margin-top:10px}.controls button{border:1px solid #fff1;background:#30241c;color:#f4e4d0;border-radius:6px;padding:8px 12px;font-size:8px;letter-spacing:.1em}.controls button:first-child{background:#673727;margin-right:auto}.controls button:last-child{margin-left:auto}.radio-hotspot{position:absolute;z-index:19;left:calc(50% - 110px);top:calc(52% - 70px);width:220px;height:145px;border-radius:10px;cursor:pointer;opacity:0}.radio-hotspot:hover{opacity:.08;background:#ffdba8}.scene-loading{position:absolute;inset:0;z-index:100;background:#17130f;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#c7ad93;font:8px Arial;letter-spacing:.22em;transition:opacity .8s,visibility .8s}.scene-loading div{width:42px;height:1px;background:#bd7748;animation:loadLine 1.2s ease-in-out infinite}.scene-loading.done{opacity:0;visibility:hidden}#toast{position:absolute;z-index:40;left:50%;top:14%;transform:translateX(-50%) translateY(-8px);background:#18130fed;padding:10px 16px;border-radius:20px;font:9px Arial;opacity:0;transition:.3s}.show{opacity:1!important;transform:translateX(-50%) translateY(0)!important}
-@keyframes slowZoom{from{transform:scale(1.01)}to{transform:scale(1.07)}}@keyframes roomDrift{from{transform:scale(1.03) translateX(-.4%)}to{transform:scale(1.08) translateX(.6%)}}@keyframes beam{from{opacity:.25;transform:rotate(17deg) translateX(-20px)}to{opacity:.65;transform:rotate(17deg) translateX(20px)}}@keyframes fan{to{transform:rotate(360deg)}}@keyframes radioBlink{0%,100%{opacity:.35}50%{opacity:1}}@keyframes steam{50%{transform:translate(15px,-18px) scale(1.15);opacity:.2}}@keyframes loadLine{0%,100%{transform:scaleX(.25);opacity:.3}50%{transform:scaleX(1);opacity:1}}
-@media(max-width:800px){.topbar nav{display:none}.landing-content{left:7vw;top:18%}.cards{grid-template-columns:1fr 1fr}.section-intro{display:block}.ambient{display:none}.kitchen-radio{top:48%;transform:translate(-50%,-50%) scale(.82)}.world-copy{bottom:27%;left:7vw}.brass-pot{opacity:.65}}@media(max-width:560px){.cards{grid-template-columns:1fr}.card{height:340px}.section-intro h2,.soon h2{font-size:38px}.landing h1{font-size:61px}.radio-player{bottom:9px}.world-copy{bottom:27%}.world-copy h2{font-size:38px}.world-copy p{font-size:10px;max-width:310px}.radio-hotspot{display:none}}
+/* ===== V7: immersive interaction layer ===== */
+.world{cursor:default}.world-photo{transition:filter 2s ease,transform 12s ease}
+.world[data-mode="sunset"] .world-photo{filter:saturate(1.06) sepia(.08) brightness(.86)}
+.world[data-mode="night"] .world-photo{filter:saturate(.75) brightness(.43) hue-rotate(5deg)}
+.world[data-mode="rain"] .world-photo{filter:saturate(.65) brightness(.62) contrast(1.04)}
+.world[data-mode="sunset"] .world-tint{background:linear-gradient(90deg,#32170bb8,#7b3f1e3d 55%,#dc98562a)}
+.world[data-mode="night"] .world-tint{background:linear-gradient(90deg,#050a15d4,#111a305f 55%,#080e1d9c)}
+.world[data-mode="rain"] .world-tint{background:linear-gradient(90deg,#111b20d2,#26383e70 55%,#15262c9f)}
+.weather-overlay{position:absolute;inset:0;z-index:12;pointer-events:none;opacity:0;transition:opacity 1.5s}
+.world[data-mode="rain"] .weather-overlay{opacity:1;background:repeating-linear-gradient(108deg,transparent 0 38px,#cbdde12c 39px 40px,transparent 41px 80px);animation:rainMove .65s linear infinite}
+.world[data-mode="night"] .weather-overlay{opacity:1;background:radial-gradient(circle at 82% 17%,#fff4c61a 0 45px,transparent 46px)}
+@keyframes rainMove{to{background-position:0 80px}}
+.signal{height:13px;display:flex;align-items:center;gap:3px;margin-top:2px}
+.signal i{width:3px;height:4px;background:#8b684e;display:block;transition:.25s}
+.signal i:nth-child(2){height:7px}.signal i:nth-child(3){height:10px}.signal i:nth-child(4){height:7px}
+.signal em{font:7px Arial;color:#bda58d;font-style:normal;margin-left:5px;letter-spacing:.12em}
+.signal.searching i{animation:signalPulse .35s infinite alternate}.signal.searching em{color:#d9955f}
+@keyframes signalPulse{to{opacity:.25;transform:scaleY(.5)}}
+.tuning{display:flex;align-items:center;gap:6px;color:#8d7764;font:7px Arial}.tuning input{flex:1}
+.radio-player .controls button{min-width:34px}.radio-player .controls button:first-child{display:flex;align-items:center;gap:5px}
+.radio-player .controls button:first-child span{font-size:7px}
+.hotspot{position:absolute;z-index:16;border-radius:50%;cursor:pointer;opacity:0;transition:.35s}
+.world:hover .hotspot{opacity:.12}
+.hotspot:hover{opacity:.42!important;background:#f7d3a3;box-shadow:0 0 30px #f7d3a3}
+.radio-hotspot{width:54px;height:54px;left:calc(50% - 270px);bottom:76px}
+.horn-hotspot{width:44px;height:44px;left:calc(50% - 238px);bottom:76px}
+.light-hotspot{width:48px;height:48px;right:calc(50% - 260px);bottom:75px}
+.headlight-glow{position:absolute;z-index:11;right:16%;bottom:28%;width:420px;height:260px;pointer-events:none;opacity:0;transform:rotate(-4deg);background:radial-gradient(ellipse at 100% 50%,#ffe9a31f 0%,transparent 65%);transition:opacity 1s}
+.world.lights-on .headlight-glow{opacity:1}
+.sound-chip{position:absolute;z-index:18;right:28px;top:58px;border:1px solid #fff2;background:#17130d99;color:#fff8;padding:7px 10px;border-radius:15px;font:7px Arial;letter-spacing:.15em;backdrop-filter:blur(7px);cursor:pointer}
+.world.muted .sound-chip{opacity:.6}
+#toast{z-index:40}
+@media(max-width:600px){
+ .hotspot{display:none}.sound-chip{top:54px;right:14px}.radio-player{width:94%}
+ .radio-player .controls button:first-child span{display:none}
+}
 
-.tractor-modal{position:fixed;inset:0;z-index:500;background:#111;display:block}
-.tractor-modal.hidden{display:none}
-.tractor-modal iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-#closeTractor{position:absolute;z-index:510;left:18px;top:18px;border:0;border-radius:18px;background:#fffdf2e8;color:#211b17;padding:8px 13px;font:9px Arial;letter-spacing:.1em;box-shadow:0 8px 25px #0006}
+/* ===== V8 polish: weather + horn + micro-details ===== */
+.listeners{
+ position:absolute;z-index:18;right:28px;top:92px;color:#fff9;
+ font:7px Arial;letter-spacing:.12em;text-transform:uppercase;
+ background:#17130d66;border:1px solid #fff1;border-radius:14px;
+ padding:7px 10px;backdrop-filter:blur(8px)
+}
+.listeners i{display:inline-block;width:5px;height:5px;border-radius:50%;background:#6fc18b;margin-right:6px;box-shadow:0 0 10px #6fc18b}
+.weather-overlay{overflow:hidden;transition:opacity 1.8s,background 1.8s}
+.world[data-mode="rain"] .weather-overlay{
+ opacity:1;
+ background:
+   linear-gradient(180deg,rgba(40,56,62,.04),rgba(21,31,34,.23)),
+   radial-gradient(ellipse at 50% 60%,transparent 25%,rgba(25,33,34,.12) 100%);
+}
+.rain-far,.rain-near,.rain-mist{position:absolute;inset:-20%;pointer-events:none}
+.rain-far{
+ opacity:.28;
+ background-image:repeating-linear-gradient(105deg,transparent 0 58px,rgba(218,231,231,.26) 59px,transparent 60px 94px);
+ background-size:120px 120px;
+ animation:rainFar 1.6s linear infinite;
+}
+.rain-near{
+ opacity:.42;
+ background-image:repeating-linear-gradient(105deg,transparent 0 31px,rgba(228,239,239,.42) 32px,transparent 34px 61px);
+ background-size:78px 78px;
+ animation:rainNear .72s linear infinite;
+}
+.rain-mist{
+ background:linear-gradient(100deg,transparent 12%,rgba(218,230,225,.10) 35%,transparent 57%,rgba(218,230,225,.08) 80%,transparent);
+ filter:blur(18px);
+ animation:rainMist 7s ease-in-out infinite alternate;
+}
+.world[data-mode="rain"] .scene-photo,
+.world[data-mode="rain"] .world-photo{filter:saturate(.63) brightness(.56) contrast(1.05)}
+@keyframes rainFar{to{transform:translate(-70px,100px)}}
+@keyframes rainNear{to{transform:translate(-110px,180px)}}
+@keyframes rainMist{from{transform:translateX(-8%);opacity:.35}to{transform:translateX(8%);opacity:.75}}
 
-/* V14 visual cleanup */
-.ceiling-fan{display:none!important}
-.fan-real{position:absolute;z-index:11;right:16%;top:8%;width:180px;height:180px;animation:fanReal 3.6s linear infinite;pointer-events:none;opacity:.72}
-.fan-hub{position:absolute;z-index:3;left:75px;top:75px;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d7c5a7,#5b4b3e 58%,#241c17 100%);box-shadow:0 3px 8px #0006}
-.fan-real:before{content:"";position:absolute;left:88px;top:-8px;width:5px;height:90px;background:linear-gradient(#30251e,#9a8065);border-radius:4px}
-.blade{position:absolute;z-index:1;left:83px;top:20px;width:14px;height:76px;border-radius:90% 90% 20% 20%;background:linear-gradient(90deg,#2b211b,#a18b71 45%,#4a392d);transform-origin:7px 70px}
-.b1{transform:rotate(0deg)}.b2{transform:rotate(120deg)}.b3{transform:rotate(240deg)}
-@keyframes fanReal{to{transform:rotate(360deg)}}
-.steel-tumbler{position:absolute;z-index:12;left:34%;bottom:14%;width:25px;height:34px;border-radius:4px 4px 8px 8px;background:linear-gradient(90deg,#6b6a64,#e1ded1 42%,#74726b);box-shadow:0 8px 14px #0006}
-.pot-a{left:10%;bottom:13%;width:75px;height:82px;opacity:.8}.pot-b{left:25%;bottom:10%;width:48px;height:57px;opacity:.72}
-.kitchen-radio{top:50%;left:54%;transform:translate(-50%,-50%);box-shadow:0 22px 45px #10090599,inset 0 0 0 4px #8b634355}
-.kitchen-radio:hover{transform:translate(-50%,-50%) scale(1.025)}
-.world-copy{bottom:21%;max-width:500px}.world-copy p{max-width:390px}
-.world-photo{filter:saturate(.82) sepia(.04) brightness(.73) contrast(1.02)}
-.world-shade{background:linear-gradient(90deg,#17100bc8 0%,#17100b52 44%,#17100b0c 78%),linear-gradient(0deg,#17100b86 0%,transparent 64%)}
-.sunbeam{right:4%;top:-12%;width:55%;height:78%;opacity:.6}
-.radio-player{bottom:18px;width:min(560px,90%);background:#17130ff0}
-@media(max-width:800px){.fan-real{right:8%;top:7%;transform:scale(.72);transform-origin:top right}.world-copy{bottom:28%}.kitchen-radio{top:43%;left:58%}}
-@media(max-width:560px){.fan-real{right:3%;top:7%;transform:scale(.52);transform-origin:top right}.kitchen-radio{top:40%;left:62%;transform:translate(-50%,-50%) scale(.72)}.world-copy{bottom:28%}.steel-tumbler{display:none}}
+.world.rain-active .radio-player{box-shadow:0 22px 70px #000b}
+.world.rain-active .ambient{opacity:.95}
 
-/* =========================================================
-   V15 — Ammamma Radio composition correction
-   Preserve the good kitchen image; fix only the distracting
-   elements that broke the illusion in the review screenshot.
-   ========================================================= */
+#horn.horn-active{
+ background:#8a482d;
+ border-color:#e6a06d66;
+ box-shadow:0 0 0 5px #d88b4a16,0 0 28px #d88b4a33;
+ transform:translateY(1px) scale(.97);
+}
+#horn{transition:.12s}
+.horn-wave{
+ position:absolute;z-index:17;left:calc(50% - 238px);bottom:82px;
+ width:20px;height:20px;border:1px solid #e4aa7a66;border-radius:50%;
+ opacity:0;pointer-events:none;
+}
+.horn-wave.active{animation:hornWave .8s ease-out}
+@keyframes hornWave{0%{opacity:.8;transform:scale(.5)}100%{opacity:0;transform:scale(6)}}
 
-/* Remove the previous artificial fan implementation. */
-.fan-real{display:none!important}
+@media(max-width:600px){
+ .listeners{right:14px;top:88px}
+ .horn-wave{display:none}
+}
 
-/* A believable ceiling-mounted fan: rod + motor + 3 broad blades. */
-.world:after{
-  content:"";
+/* V9 radio */
+.yt-frame{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden}
+.track span{display:block;margin-top:4px;color:#88796b;font:7px Arial;letter-spacing:.05em}
+.radio-player .controls #volume{min-width:42px}
+.station-open{
+ position:absolute;z-index:19;left:28px;top:58px;
+ border:1px solid #fff2;background:#17130d99;color:#fff8;
+ border-radius:15px;padding:7px 10px;font:7px Arial;letter-spacing:.15em;
+ backdrop-filter:blur(8px);cursor:pointer
+}
+.station-drawer{
+ position:absolute;z-index:35;right:28px;top:120px;width:270px;
+ background:#17130fee;border:1px solid #fff2;border-radius:10px;
+ padding:12px;box-shadow:0 20px 60px #0009;backdrop-filter:blur(15px);
+ opacity:0;transform:translateY(-8px);pointer-events:none;transition:.3s
+}
+.station-drawer.open{opacity:1;transform:translateY(0);pointer-events:auto}
+.drawer-head{display:flex;justify-content:space-between;color:#c7aa8b;font:8px Arial;letter-spacing:.15em;margin-bottom:8px}
+.drawer-head button{border:0;background:none;color:#fff8;font-size:18px}
+.station-choice{
+ width:100%;display:grid;grid-template-columns:48px 1fr;text-align:left;
+ gap:8px;align-items:center;border:1px solid #fff1;background:#211a14;
+ color:#f4e5d1;padding:10px;margin:5px 0;border-radius:6px;cursor:pointer
+}
+.station-choice b{font:13px Arial;color:#e3a36f}.station-choice span{font:8px Arial;color:#aaa}.station-choice.active{border-color:#d28a5555;background:#342319}
+@media(max-width:600px){.station-drawer{right:14px;width:calc(100% - 28px)}.station-open{left:14px}}
+
+/* V10 final Tractor Anna polish */
+.scene-meta{display:flex;gap:9px;align-items:center;margin-top:18px;font:7px Arial;letter-spacing:.18em;color:#fff8}
+.scene-meta i{width:3px;height:3px;background:#d89562;border-radius:50%}
+.world-copy{animation:copyIn 1.2s cubic-bezier(.2,.8,.2,1) .25s both}
+.radio-player{animation:playerIn 1s cubic-bezier(.2,.8,.2,1) .5s both}
+.ambient{animation:ambientIn 1.4s ease 1s both}
+.scene-loading{position:absolute;inset:0;z-index:100;background:#17130f;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#c7ad93;font:8px Arial;letter-spacing:.22em;transition:opacity .8s,visibility .8s}
+.scene-loading div{width:42px;height:1px;background:#bd7748;animation:loadLine 1.2s ease-in-out infinite}
+.scene-loading.done{opacity:0;visibility:hidden}
+@keyframes loadLine{0%,100%{transform:scaleX(.25);opacity:.3}50%{transform:scaleX(1);opacity:1}}
+@keyframes copyIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes playerIn{from{opacity:0;transform:translateX(-50%) translateY(22px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@keyframes ambientIn{from{opacity:0}to{opacity:1}}
+.world[data-mode="night"] .world-copy h2{text-shadow:0 0 35px #9bb7d044}
+.world[data-mode="rain"] .world-copy p{color:#dce4e4cc}
+.radio-player:after{content:"";position:absolute;left:12px;right:12px;top:0;height:1px;background:linear-gradient(90deg,transparent,#d4935e88,transparent);opacity:.55}
+@media(max-width:600px){.scene-meta{margin-top:12px}.world-copy p{max-width:310px}.scene-loading{font-size:7px}}
+
+/* ===== V11 stable atmosphere ===== */
+.world{--weather-duration:1.8s}
+.sunset-glow,.night-glow{position:absolute;inset:0;z-index:11;pointer-events:none;opacity:0;transition:opacity 2s ease}
+.sunset-glow{background:linear-gradient(180deg,rgba(239,117,59,.05),rgba(218,93,42,.26) 62%,rgba(92,47,30,.32));mix-blend-mode:multiply}
+.night-glow{background:linear-gradient(180deg,rgba(9,24,55,.62),rgba(18,30,50,.26) 52%,rgba(8,13,20,.56));}
+.world[data-mode="sunset"] .sunset-glow{opacity:1}
+.world[data-mode="night"] .night-glow{opacity:1}
+.world[data-mode="rain"] .sunset-glow{opacity:.03}
+.world[data-mode="rain"] .weather-overlay{opacity:1}
+.rain-far{background-image:repeating-linear-gradient(108deg,transparent 0 52px,rgba(220,235,236,.25) 53px 54px,transparent 55px 90px);background-size:120px 120px}
+.rain-near{background-image:repeating-linear-gradient(108deg,transparent 0 27px,rgba(235,244,244,.42) 28px 30px,transparent 31px 58px);background-size:75px 75px}
+.rain-puddle{position:absolute;left:8%;right:8%;bottom:8%;height:18%;opacity:0;background:radial-gradient(ellipse at 50% 70%,rgba(184,205,203,.20),transparent 62%);filter:blur(8px)}
+.world[data-mode="rain"] .rain-puddle{opacity:1;animation:puddle 3s ease-in-out infinite}
+@keyframes puddle{50%{transform:scale(1.05);opacity:.7}}
+.world[data-mode="sunset"] .world-photo{filter:saturate(1.12) sepia(.08) brightness(.78) contrast(1.03)}
+.world[data-mode="night"] .world-photo{filter:saturate(.65) brightness(.38) contrast(1.04)}
+.world[data-mode="rain"] .world-photo{filter:saturate(.58) brightness(.55) contrast(1.08)}
+.world[data-mode="sunset"] .ambient{color:#ffe2c8}
+.world[data-mode="night"] .ambient{color:#dce8ff}
+.world[data-mode="rain"] .ambient{color:#dce8e8}
+
+#horn{position:relative;min-width:72px!important}
+#horn:active{transform:scale(.94);background:#9b5233!important}
+#horn.horn-active{box-shadow:0 0 0 6px rgba(222,143,85,.13),0 0 30px rgba(222,143,85,.45)!important}
+.horn-wave{border-color:#e5a87588}
+.horn-label{font:7px Arial;letter-spacing:.12em}
+
+.horn-ready{position:absolute;z-index:18;left:calc(50% - 238px);bottom:55px;color:#fff8;font:6px Arial;letter-spacing:.14em;opacity:.55;pointer-events:none}
+@media(max-width:600px){.horn-ready{display:none}}
+
+/* V12: explicit mutually-exclusive weather states */
+.world[data-mode="day"] .sunset-glow,.world[data-mode="day"] .night-glow{opacity:0!important}
+.world[data-mode="day"] .weather-overlay{opacity:0!important}
+.world[data-mode="sunset"] .weather-overlay,.world[data-mode="night"] .weather-overlay{opacity:0!important}
+.world[data-mode="sunset"] .sunset-glow{opacity:1!important}
+.world[data-mode="night"] .night-glow{opacity:1!important}
+.world[data-mode="rain"] .sunset-glow,.world[data-mode="rain"] .night-glow{opacity:0!important}
+.world[data-mode="rain"] .weather-overlay{opacity:1!important}
+.world[data-mode="day"] .world-photo{filter:saturate(.88) brightness(1)}
+.world[data-mode="sunset"] .world-photo{filter:saturate(1.14) sepia(.10) brightness(.78) contrast(1.04)}
+.world[data-mode="night"] .world-photo{filter:saturate(.62) brightness(.38) contrast(1.06) hue-rotate(4deg)}
+.world[data-mode="rain"] .world-photo{filter:saturate(.58) brightness(.55) contrast(1.08)}
+#play{min-width:42px!important}
+.yt-frame{position:absolute;width:2px;height:2px;left:-10px;top:-10px;border:0;opacity:.01;pointer-events:none}
+
+/* V21 — Tractor Anna 31-song radio */
+.station-drawer{width:340px!important;max-height:min(68vh,620px);overflow:hidden}
+.playlist-list{max-height:calc(min(68vh,620px) - 52px);overflow:auto;padding-right:3px}
+.playlist-list::-webkit-scrollbar{width:4px}
+.playlist-list::-webkit-scrollbar-thumb{background:#9c714f55;border-radius:4px}
+.song-choice{
+ width:100%;display:grid;grid-template-columns:30px 1fr 43px;
+ gap:8px;align-items:center;text-align:left;border:1px solid #fff0;
+ background:#211a14;color:#f4e5d1;padding:9px 8px;margin:3px 0;border-radius:6px;cursor:pointer
+}
+.song-choice:hover{background:#34251c;border-color:#d28a5522}
+.song-choice.active{background:#3a271d;border-color:#d28a5566}
+.song-choice .num{font:8px Arial;color:#9d8065;text-align:center}
+.song-choice .name{font:9px Arial;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.song-choice .meta{display:block;color:#817467;font-size:7px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.song-choice .badge{font:6px Arial;letter-spacing:.08em;text-align:center;color:#e0a36d}
+.song-choice.pending .badge{color:#817467}
+@media(max-width:600px){.station-drawer{width:calc(100% - 28px)!important}.playlist-list{max-height:55vh}}
+
+/* V22 AUDIO FIX — real YouTube IFrame API player.
+   It is deliberately visible and at least 200x200 to comply with
+   YouTube's embedded-player requirements. */
+.yt-wrap{
   position:absolute;
-  z-index:10;
-  left:61%;
-  top:-2%;
-  width:6px;
-  height:118px;
-  background:linear-gradient(90deg,#211914,#8a725c 45%,#211914);
-  border-radius:4px;
-  box-shadow:0 12px 18px #0003;
-  pointer-events:none;
-}
-.world:before{
-  content:"";
-  position:absolute;
-  z-index:11;
-  left:calc(61% - 74px);
-  top:55px;
-  width:148px;
-  height:148px;
-  border-radius:50%;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at center,#bca88c 0 8%,#4b3b30 9% 13%,transparent 14%),
-    conic-gradient(from 4deg,
-      transparent 0 7%,#49382c 8% 23%,transparent 24% 40%,
-      #49382c 41% 56%,transparent 57% 73%,
-      #49382c 74% 89%,transparent 90% 100%);
-  filter:drop-shadow(0 8px 8px #0005);
-  animation:ammammaFan 4.8s linear infinite;
-}
-@keyframes ammammaFan{to{transform:rotate(360deg)}}
-
-/* The existing background fan is visually minimized by the darker
-   ceiling vignette; the new fan becomes the readable focal object. */
-.world-shade{
-  background:
-    linear-gradient(180deg,#130d09a8 0%,transparent 18%),
-    linear-gradient(90deg,#17100bc0 0%,#17100b48 44%,#17100b0b 78%),
-    linear-gradient(0deg,#17100b7d 0%,transparent 64%)!important;
-}
-
-/* Radio now physically sits on a wooden wall shelf. */
-.radio-shelf{
-  position:absolute;
-  z-index:12;
-  left:calc(54% - 130px);
-  top:calc(50% + 62px);
-  width:260px;
-  height:68px;
-  pointer-events:none;
-}
-.shelf-board{
-  position:absolute;
-  left:0;
-  bottom:10px;
-  width:260px;
-  height:15px;
-  border-radius:2px;
-  background:linear-gradient(180deg,#765037,#3a261b 55%,#251811);
-  box-shadow:0 12px 22px #12090599, inset 0 1px #b98a6255;
-}
-.shelf-bracket{
-  position:absolute;
-  bottom:-1px;
-  width:8px;
-  height:39px;
-  background:#3a271c;
-  box-shadow:0 2px 4px #0006;
-}
-.shelf-bracket:after{
-  content:"";
-  position:absolute;
-  width:35px;height:7px;
-  bottom:0;
-  background:#3a271c;
-}
-.shelf-bracket.left{left:28px;transform:skewX(-12deg)}
-.shelf-bracket.right{right:28px;transform:skewX(12deg)}
-.kitchen-radio{
-  top:calc(50% - 1px)!important;
-  left:54%!important;
-  width:188px!important;
-  height:120px!important;
-  transform:translate(-50%,-50%)!important;
-  box-shadow:0 15px 24px #100905aa,inset 0 0 0 4px #8b634355!important;
-}
-.kitchen-radio:hover{
-  transform:translate(-50%,-50%) scale(1.018)!important;
-}
-
-/* Controlled steam, anchored to a vessel rather than floating in space. */
-.steam,.steam1,.steam2{display:none!important}
-.steam-source{
-  position:absolute;
-  z-index:13;
-  left:19%;
-  bottom:27%;
-  width:70px;
-  height:125px;
-  pointer-events:none;
-  opacity:.34;
-}
-.steam-source span{
-  position:absolute;
-  bottom:0;
-  width:18px;
-  height:86px;
-  border-radius:50%;
-  background:linear-gradient(90deg,transparent,#f8e9d026,transparent);
-  filter:blur(7px);
-  animation:gentleSteam 5s ease-in-out infinite;
-}
-.steam-source span:first-child{left:17px}
-.steam-source span:last-child{left:39px;height:72px;animation-delay:1.3s}
-@keyframes gentleSteam{
-  0%{transform:translate(0,8px) scale(.8);opacity:0}
-  30%{opacity:.7}
-  100%{transform:translate(12px,-45px) scale(1.15);opacity:0}
-}
-
-/* Fewer, quieter foreground vessels. */
-.pot-a{left:9%!important;bottom:12%!important;width:70px!important;height:78px!important;opacity:.58!important}
-.pot-b{left:26%!important;bottom:10%!important;width:44px!important;height:52px!important;opacity:.42!important}
-.steel-tumbler{left:33%!important;bottom:13%!important;opacity:.65}
-
-/* Make the text support the room rather than compete with it. */
-.world-copy{
-  left:7.5vw!important;
-  bottom:22%!important;
-  max-width:460px!important;
-  text-shadow:0 3px 18px #000!important;
-}
-.world-copy h2{
-  font-size:clamp(40px,4.5vw,66px)!important;
-  margin:8px 0!important;
-}
-.world-copy p{
-  max-width:355px!important;
-  color:#fff9!important;
-}
-
-/* Smaller, quieter control panel — the physical radio is the hero. */
-.radio-player{
-  width:min(470px,82%)!important;
-  bottom:16px!important;
-  padding:10px 13px!important;
-  opacity:.94;
-}
-.radio-player .track b{font-size:16px!important}
-.radio-player .controls{margin-top:7px!important}
-.radio-player .controls button{padding:7px 10px!important}
-
-/* Tone down the ambient label. */
-.ambient{
-  right:4.5vw!important;
-  bottom:25%!important;
-  opacity:.62;
-  font-size:7px!important;
-}
-
-/* Keep the upper metadata clean. */
-.world-top{right:24px!important;left:auto!important;top:25px!important}
-.back{left:25px!important;top:20px!important}
-
-/* Responsive composition */
-@media(max-width:800px){
-  .world:after{left:68%;height:85px}
-  .world:before{left:calc(68% - 54px);top:38px;width:108px;height:108px}
-  .radio-shelf{left:calc(58% - 105px);top:calc(43% + 52px);width:210px}
-  .shelf-board{width:210px}
-  .kitchen-radio{left:58%!important;top:43%!important}
-  .world-copy{left:6vw!important;bottom:27%!important}
-}
-@media(max-width:560px){
-  .world:after{left:72%;height:65px}
-  .world:before{left:calc(72% - 40px);top:30px;width:80px;height:80px}
-  .radio-shelf{left:62%;top:calc(40% + 43px);width:160px}
-  .shelf-board{width:160px}
-  .kitchen-radio{left:62%!important;top:40%!important;transform:translate(-50%,-50%) scale(.72)!important}
-  .kitchen-radio:hover{transform:translate(-50%,-50%) scale(.735)!important}
-  .world-copy{bottom:28%!important}
-}
-
-/* V16 — final prop placement + ceiling fan + controls */
-
-/* Brass vessels are now grouped as a believable kitchen counter cluster,
-   rather than two floating yellow blobs. */
-.brass-pot{
-  background:
-    radial-gradient(ellipse at 35% 20%,#e2bf7c 0 8%,transparent 9%),
-    linear-gradient(115deg,#66451f 0%,#a97836 20%,#d5ad67 46%,#825626 72%,#4b321b 100%)!important;
-  border:1px solid #e6c27d55;
-  box-shadow:
-    inset 7px 0 9px #f0c87922,
-    inset -8px -6px 12px #1c100866,
-    0 12px 24px #10090566!important;
-}
-.pot-a{
-  left:14%!important;
-  bottom:11%!important;
-  width:92px!important;
-  height:104px!important;
-  opacity:.78!important;
-  border-radius:48% 48% 16px 16px!important;
-}
-.pot-a:before{
-  content:"";
-  position:absolute;
-  left:-8px;right:-8px;top:-8px;height:15px;
-  border-radius:50%;
-  border:4px solid #b48748;
-  background:#6a4827;
-  box-shadow:inset 0 2px 5px #e7c37b66;
-}
-.pot-a:after{
-  content:"";
-  position:absolute;
-  width:108px;height:24px;
-  left:-9px;top:39px;
-  border-top:4px solid #e0b96e55;
-  border-radius:50%;
-}
-.pot-b{
-  left:23%!important;
-  bottom:9%!important;
-  width:62px!important;
-  height:70px!important;
-  opacity:.7!important;
-  border-radius:48% 48% 14px 14px!important;
-}
-.pot-b:before{
-  content:"";
-  position:absolute;
-  left:-5px;right:-5px;top:-6px;height:11px;
-  border-radius:50%;
-  border:3px solid #b48748;
-  background:#684723;
-}
-.steel-tumbler{
-  left:31%!important;
-  bottom:10%!important;
-  width:29px!important;
-  height:39px!important;
-  opacity:.72!important;
-}
-
-/* The radio shelf is now clearly aligned with the radio footprint. */
-.radio-shelf{
-  left:calc(54% - 135px)!important;
-  top:calc(50% + 53px)!important;
-  width:270px!important;
-}
-.shelf-board{width:270px!important;height:16px!important}
-.shelf-bracket.left{left:24px!important}
-.shelf-bracket.right{right:24px!important}
-
-/* Better ceiling fan: centered motor, clear 3 broad blades, long ceiling rod,
-   restrained enough not to look like a game prop. */
-.world:after{
-  left:64%!important;
-  top:-5%!important;
-  width:7px!important;
-  height:132px!important;
-  background:linear-gradient(90deg,#1d1611,#9b8165 42%,#2a1e17)!important;
-}
-.world:before{
-  left:calc(64% - 91px)!important;
-  top:77px!important;
-  width:182px!important;
-  height:182px!important;
-  background:
-    radial-gradient(circle at center,#d0b894 0 7%,#4a392d 8% 12%,#211812 13% 15%,transparent 16%),
-    conic-gradient(from 2deg,
-      transparent 0 6%,#514033 7% 24%,transparent 25% 39%,
-      #514033 40% 57%,transparent 58% 72%,
-      #514033 73% 90%,transparent 91% 100%)!important;
-  filter:drop-shadow(0 9px 10px #0006)!important;
-  animation:ammammaFan 5.4s linear infinite!important;
-}
-
-/* Make steam travel with the fan's horizontal airflow: up + right,
-   thinning as it rises. */
-.steam-source{
-  left:18%!important;
-  bottom:26%!important;
-  width:120px!important;
-  height:145px!important;
-  opacity:.30!important;
-}
-.steam-source span{
-  background:linear-gradient(90deg,transparent,#f7e5c81f 42%,transparent)!important;
-}
-.steam-source span:first-child{
-  left:25px!important;
-  animation:steamAirflow 5.8s ease-in-out infinite!important;
-}
-.steam-source span:last-child{
-  left:49px!important;
-  animation:steamAirflow 6.6s ease-in-out .8s infinite!important;
-}
-@keyframes steamAirflow{
-  0%{transform:translate(0,8px) scale(.72) rotate(-3deg);opacity:0}
-  22%{opacity:.6}
-  55%{transform:translate(22px,-46px) scale(1.02) rotate(7deg);opacity:.34}
-  100%{transform:translate(52px,-105px) scale(1.24) rotate(13deg);opacity:0}
-}
-
-/* Controls: polished but still minimal. */
-#knobBtn,#volume{
-  min-width:68px;
-  transition:transform .18s ease,background .18s ease;
-}
-#knobBtn:active,#volume:active{transform:scale(.95)}
-.volume-meter{
-  position:absolute;
-  right:88px;
-  bottom:15px;
-  width:65px;
-  height:3px;
-  background:#fff2;
-  border-radius:3px;
+  z-index:24;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:200px;
+  height:200px;
+  border-radius:10px;
   overflow:hidden;
+  background:#17130f;
+  border:1px solid #d19a6a55;
+  box-shadow:0 16px 38px #0009;
 }
-.volume-meter span{
-  display:block;
-  width:60%;
-  height:100%;
-  background:#c97b42;
-  transition:width .25s ease;
-}
-#volume{font-size:7px!important}
-#volValue{font-size:6px;color:#c7a786;margin-left:3px}
-
-/* V17 — remove floating brass props and make steam visibly alive but subtle */
-.brass-pot,.pot-a,.pot-b{display:none!important}
-.steam-source{
-  display:block!important;
-  left:18%!important;
-  bottom:25%!important;
-  width:110px!important;
-  height:135px!important;
-  opacity:.30!important;
-  pointer-events:none;
-  z-index:14!important;
-}
-.steam-source span{
+.yt-frame{
+  width:200px!important;
+  height:200px!important;
   position:absolute!important;
-  display:block!important;
-  bottom:0!important;
-  width:15px!important;
-  height:74px!important;
-  border-radius:50%!important;
-  background:linear-gradient(90deg,transparent,#fff0d61c 45%,transparent)!important;
-  filter:blur(6px)!important;
-  opacity:0!important;
-}
-.steam-source span:first-child{
-  left:28px!important;
-  animation:steamDriftOne 4.8s ease-in-out infinite!important;
-}
-.steam-source span:last-child{
-  left:45px!important;
-  height:62px!important;
-  animation:steamDriftTwo 5.7s ease-in-out .9s infinite!important;
-}
-@keyframes steamDriftOne{
-  0%{transform:translate(0,8px) scale(.62);opacity:0}
-  18%{opacity:.42}
-  52%{transform:translate(17px,-46px) scale(.92) rotate(5deg);opacity:.25}
-  100%{transform:translate(38px,-108px) scale(1.15) rotate(12deg);opacity:0}
-}
-@keyframes steamDriftTwo{
-  0%{transform:translate(0,7px) scale(.58);opacity:0}
-  20%{opacity:.32}
-  55%{transform:translate(25px,-43px) scale(.9) rotate(8deg);opacity:.2}
-  100%{transform:translate(47px,-100px) scale(1.1) rotate(14deg);opacity:0}
-}
-
-.steam-source.steam-live{animation:steamBreath 4.6s ease-in-out infinite}
-@keyframes steamBreath{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
-
-/* =========================================================
-   V18 FINAL — fan + steam reliability pass
-   ========================================================= */
-
-/* Disable the old pseudo fan completely. */
-.world:before,.world:after{display:none!important}
-.fan-real{display:none!important}
-.ceiling-fan{display:none!important}
-
-/* Real ceiling fan: clearly attached to the ceiling and visually readable. */
-.ceiling-fan-v18{
-  position:absolute;
-  z-index:30;
-  right:13%;
-  top:1%;
-  width:230px;
-  height:230px;
-  pointer-events:none;
-  animation:fanRotateV18 4.8s linear infinite;
-  filter:drop-shadow(0 8px 8px #0007);
-}
-.fan-rod{
-  position:absolute;
-  left:110px;
-  top:-18px;
-  width:9px;
-  height:100px;
-  border-radius:5px;
-  background:linear-gradient(90deg,#201711,#ad9676 44%,#35271e);
-}
-.fan-motor{
-  position:absolute;
-  left:88px;
-  top:70px;
-  width:54px;
-  height:54px;
-  border-radius:50%;
-  background:radial-gradient(circle at 34% 28%,#d9c7a7 0 7%,#8d765d 8% 28%,#403127 29% 62%,#1d1510 63%);
-  box-shadow:0 4px 10px #0008,inset 0 1px 3px #f4dfb655;
-}
-.fan-motor:after{
-  content:"";
-  position:absolute;
-  left:23px;
-  top:7px;
-  width:8px;
-  height:16px;
-  border-radius:6px;
-  background:#e0c89f;
-}
-.fan-blade{
-  position:absolute;
-  left:104px;
-  top:42px;
-  width:23px;
-  height:105px;
-  border-radius:65% 65% 18% 18%;
-  background:linear-gradient(90deg,#30241c,#aa9274 48%,#49382c);
-  transform-origin:11.5px 92px;
-  box-shadow:0 5px 9px #0005;
-}
-.fb1{transform:rotate(0deg)}
-.fb2{transform:rotate(120deg)}
-.fb3{transform:rotate(240deg)}
-@keyframes fanRotateV18{to{transform:rotate(360deg)}}
-
-/* Steam is anchored low in the kitchen and made brighter than V17.
-   Three strands drift right/up to communicate the fan airflow. */
-.steam-source{
-  display:block!important;
-  z-index:32!important;
-  left:17%!important;
-  bottom:23%!important;
-  width:145px!important;
-  height:170px!important;
+  inset:0!important;
   opacity:1!important;
-  pointer-events:none!important;
-}
-.steam-source span{
-  position:absolute!important;
-  bottom:0!important;
+  pointer-events:auto!important;
   display:block!important;
-  width:20px!important;
-  height:90px!important;
-  border-radius:50%!important;
-  background:linear-gradient(90deg,transparent,rgba(255,239,213,.30) 45%,transparent)!important;
-  filter:blur(5px)!important;
-  opacity:0!important;
+  border:0!important;
 }
-.steam-source span:nth-child(1){
-  left:32px!important;
-  animation:steamV18a 4.8s ease-in-out infinite!important;
+.radio-player{
+  padding-top:222px!important;
 }
-.steam-source span:nth-child(2){
-  left:52px!important;
-  height:76px!important;
-  animation:steamV18b 5.4s ease-in-out .75s infinite!important;
-}
-.steam-source span:nth-child(3){
-  left:70px!important;
-  height:66px!important;
-  animation:steamV18c 6s ease-in-out 1.35s infinite!important;
-}
-@keyframes steamV18a{
-  0%{transform:translate(0,8px) scale(.55) rotate(-4deg);opacity:0}
-  18%{opacity:.72}
-  52%{transform:translate(23px,-52px) scale(.95) rotate(8deg);opacity:.42}
-  100%{transform:translate(55px,-126px) scale(1.18) rotate(16deg);opacity:0}
-}
-@keyframes steamV18b{
-  0%{transform:translate(0,8px) scale(.5) rotate(-5deg);opacity:0}
-  20%{opacity:.58}
-  56%{transform:translate(27px,-50px) scale(.9) rotate(10deg);opacity:.30}
-  100%{transform:translate(60px,-115px) scale(1.14) rotate(17deg);opacity:0}
-}
-@keyframes steamV18c{
-  0%{transform:translate(0,6px) scale(.45) rotate(-3deg);opacity:0}
-  22%{opacity:.48}
-  58%{transform:translate(25px,-45px) scale(.84) rotate(9deg);opacity:.24}
-  100%{transform:translate(57px,-104px) scale(1.08) rotate(15deg);opacity:0}
-}
-.steam-source.steam-live{animation:steamSourceV18 5s ease-in-out infinite!important}
-@keyframes steamSourceV18{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
-
-/* Keep the clean kitchen composition: no brass-pot remnants. */
-.brass-pot,.pot-a,.pot-b{display:none!important}
-
-/* Mobile */
-@media(max-width:800px){
-  .ceiling-fan-v18{right:5%;top:0;transform:scale(.78);transform-origin:top right}
-  .steam-source{left:13%!important;bottom:25%!important;transform:scale(.82);transform-origin:bottom left}
-}
-@media(max-width:560px){
-  .ceiling-fan-v18{right:1%;top:0;transform:scale(.56);transform-origin:top right}
-  .steam-source{left:8%!important;bottom:27%!important;transform:scale(.65);transform-origin:bottom left}
+@media(max-width:600px){
+  .yt-wrap{width:200px;height:200px;top:42%;transform:translate(-50%,-50%) scale(.82);transform-origin:center}
+  .radio-player{padding-top:205px!important}
 }
 
-/* V19 — remove fan + white vessel, make steam visibly animate */
-.world:before,.world:after,
-.ceiling-fan-v18,.fan-real,.ceiling-fan,
-.fan-rod,.fan-motor,.fan-blade{display:none!important}
+#ytHost{position:absolute!important;left:-10000px!important;top:-10000px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.radio-player{position:absolute!important;z-index:40!important;left:50%!important;bottom:24px!important;transform:translateX(-50%)!important;width:min(640px,calc(100% - 32px))!important;padding:12px 16px!important;background:rgba(24,17,12,.94)!important;border:1px solid rgba(229,179,126,.18)!important;border-radius:12px!important;box-shadow:0 18px 45px rgba(0,0,0,.34)!important}
+.world-copy{z-index:22!important;max-width:510px!important}
+.station-open{z-index:45!important}.station-drawer{z-index:60!important}
+.local-notice{position:fixed;z-index:9999;left:50%;top:18px;transform:translateX(-50%);padding:9px 14px;border-radius:999px;background:rgba(24,17,12,.92);color:#f3dfc5;border:1px solid #d69a6355;font:11px Arial,sans-serif;box-shadow:0 10px 30px #0005}
 
-.steel-tumbler,.brass-pot,.pot-a,.pot-b{display:none!important}
+/* V24 FINAL RADIO STRUCTURE FIX */
+.radio-player{display:block!important;min-height:148px!important}
+.radio-player .player-label,.radio-player .tuning,.radio-player .signal,.radio-player .track,.radio-player .controls{position:relative!important;z-index:2!important}
+.radio-player .tuning{display:flex!important}
+.radio-player .signal{display:flex!important}
+.radio-player .track{display:block!important}
+.radio-player .controls{display:flex!important;align-items:center!important;justify-content:space-between!important}
 
-/* A visible steam plume: each wisp has its own motion and opacity cycle. */
-.steam-source{
-  display:block!important;
-  position:absolute!important;
-  z-index:34!important;
-  left:17%!important;
-  bottom:25%!important;
-  width:150px!important;
-  height:170px!important;
-  pointer-events:none!important;
-  opacity:1!important;
-  transform:none!important;
-}
-.steam-wisp{
-  position:absolute!important;
-  display:block!important;
-  bottom:0!important;
-  width:22px!important;
-  height:105px!important;
-  border-radius:50%!important;
-  background:
-    radial-gradient(ellipse at center,
-      rgba(255,244,222,.38) 0%,
-      rgba(255,239,214,.20) 30%,
-      rgba(255,239,214,.06) 58%,
-      transparent 76%)!important;
-  filter:blur(5px)!important;
-  opacity:0!important;
-  will-change:transform,opacity!important;
-}
-.s1{left:28px!important;animation:steamWisp1 4.2s ease-in-out infinite!important}
-.s2{left:50px!important;height:92px!important;animation:steamWisp2 4.8s ease-in-out .65s infinite!important}
-.s3{left:70px!important;height:82px!important;animation:steamWisp3 5.2s ease-in-out 1.15s infinite!important}
+/* FINAL V25 — no giant/error player in local preview; compact hosted player */
+.yt-wrap{position:fixed!important;right:24px!important;bottom:96px!important;width:200px!important;height:112px!important;z-index:15!important;border-radius:12px!important;overflow:hidden!important;background:#000!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:0 10px 24px rgba(0,0,0,.35)!important}
+.yt-frame{width:100%!important;height:100%!important;display:block!important}
+@media(max-width:760px){.yt-wrap{right:12px!important;bottom:150px!important;width:180px!important;height:101px!important}}
+@media(max-width:760px){.radio-player{width:min(640px,calc(100% - 28px))!important}}
 
-@keyframes steamWisp1{
-  0%{opacity:0;transform:translate3d(0,10px,0) scale(.55) rotate(-4deg)}
-  15%{opacity:.85}
-  45%{opacity:.62;transform:translate3d(10px,-38px,0) scale(.82) rotate(3deg)}
-  72%{opacity:.35;transform:translate3d(27px,-76px,0) scale(1.05) rotate(10deg)}
-  100%{opacity:0;transform:translate3d(48px,-132px,0) scale(1.25) rotate(17deg)}
-}
-@keyframes steamWisp2{
-  0%{opacity:0;transform:translate3d(0,9px,0) scale(.5) rotate(-5deg)}
-  18%{opacity:.72}
-  48%{opacity:.5;transform:translate3d(13px,-34px,0) scale(.8) rotate(4deg)}
-  75%{opacity:.28;transform:translate3d(31px,-70px,0) scale(1.02) rotate(11deg)}
-  100%{opacity:0;transform:translate3d(53px,-119px,0) scale(1.18) rotate(18deg)}
-}
-@keyframes steamWisp3{
-  0%{opacity:0;transform:translate3d(0,7px,0) scale(.48) rotate(-4deg)}
-  20%{opacity:.66}
-  50%{opacity:.44;transform:translate3d(14px,-32px,0) scale(.78) rotate(5deg)}
-  78%{opacity:.24;transform:translate3d(34px,-65px,0) scale(1) rotate(12deg)}
-  100%{opacity:0;transform:translate3d(57px,-109px,0) scale(1.15) rotate(19deg)}
-}
+@media all{body[data-local-preview='true'] .yt-wrap{display:none!important}}
 
-/* Steam is intentionally independent of the old JS class, so it animates
-   immediately and cannot fail because of audio/browser autoplay state. */
-.steam-source.steam-live{animation:none!important}
-
-/* V20 — steam is rendered independently on canvas, so it cannot be
-   swallowed by CSS timing/opacity or audio/autoplay state. */
-#steamCanvas{
-  position:absolute!important;
-  z-index:35!important;
-  left:0!important;
-  top:0!important;
-  width:100%!important;
-  height:100%!important;
-  pointer-events:none!important;
-  display:block!important;
-}
+/* V26: Paatalashala-style real player area */
+.yt-wrap{position:absolute!important;right:18px!important;bottom:18px!important;width:200px!important;height:200px!important;z-index:55!important;border-radius:12px!important;overflow:hidden!important;background:#111!important;box-shadow:0 10px 28px rgba(0,0,0,.35)!important}
+.yt-frame{width:200px!important;height:200px!important;display:block!important;border:0!important}
+@media(max-width:900px){.yt-wrap{width:160px!important;height:160px!important}.yt-frame{width:160px!important;height:160px!important}}
