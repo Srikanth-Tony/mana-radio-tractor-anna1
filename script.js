@@ -148,7 +148,52 @@ function playRadio(){
  playing=true;if(playBtn)playBtn.textContent='Ⅱ';
  if(!ytPlayer){initYT();return;}
  try{ytPlayer.loadVideoById({videoId:t.video});}catch(e){playing=false;if(playBtn)playBtn.textContent='▶';}
+}playBtn&&playBtn.addEventListener('click',()=>playing?pauseRadio():playRadio());
+ function findNextPlayable(direction){
+  const total = tracks.length;
+
+  for(let step = 1; step <= total; step++){
+    const i = (trackIndex + direction * step + total) % total;
+    if(tracks[i] && tracks[i].video){
+      return i;
+    }
+  }
+
+  return trackIndex;
 }
+
+function changeTrack(direction){
+  const nextIndex = findNextPlayable(direction);
+
+  if(nextIndex === trackIndex){
+    toast('No playable track available');
+    return;
+  }
+
+  trackIndex = nextIndex;
+  renderTrack();
+  refreshPlaylistActive();
+
+  playing = true;
+  if(playBtn) playBtn.textContent = 'Ⅱ';
+
+  if(!ytPlayer){
+    initYT();
+    return;
+  }
+
+  try{
+    ytPlayer.loadVideoById({
+      videoId: tracks[trackIndex].video
+    });
+  }catch(e){
+    playing = false;
+    if(playBtn) playBtn.textContent = '▶';
+  }
+}
+
+nextBtn?.addEventListener('click',()=>changeTrack(1));
+prevBtn?.addEventListener('click',()=>changeTrack(-1));
 function pauseRadio(){if(ytPlayer&&ytPlayerReady){try{ytPlayer.pauseVideo();}catch(e){}}playing=false;if(playBtn)playBtn.textContent='▶';}
 playBtn&&playBtn.addEventListener('click',()=>playing?pauseRadio():playRadio());
 
